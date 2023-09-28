@@ -65,14 +65,22 @@
         pointer-events: none;
         transition: all .25s;
         a {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
           color: #179cde;
           border-radius: 0;
           font-size: 14px;
-          text-align: center;
+          text-align: left;
           padding: 10px;
+          svg {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+          }
           &.exit {
             color: #de1717;
-            font-weight: 700;
+            // font-weight: 700;
           }
           & + * {
             border-top: 1px solid rgba(0, 0, 0, 0.05);
@@ -106,26 +114,15 @@
           text-align: center;
           border: 0;
           display: block;
-          span {
+          svg {
+            color: #179cde;
             display: block;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 20px;
-            height: 13px;
-            border-top: 1px solid #179cde;
-            border-bottom: 1px solid #179cde;
-            &:before {
-              content: '';
-              position: absolute;
-              top: 50%;
-              left: 0;
-              right: 0;
-              height: 1px;
-              background-color: #179cde;
-              transform: translate( 0, -50%);
-            }
+            height: 20px;
           }
         }
       }
