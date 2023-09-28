@@ -1,0 +1,180 @@
+// Normalize.css
+@import "../../node_modules/normalize.css/normalize";
+// Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap-grid';
+
+// Шрифты
+// Удалить файл fonts.scss, если произошли какие-то изменения со шрифтами
+@import "fonts";
+
+// Переменны (цвета, скорость transition и пр)
+@import "_variables";
+
+@import "_header";
+@import "_hello";
+@import "_footer";
+
+*{
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  padding: 15px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 360px;
+  overflow-x: hidden;
+  font-family: $main_font;
+  background-color: #efeef4;
+  color: #333;
+  font-size: 15px;
+  line-height: 158%;
+  main {
+    flex: 1 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    h1, h2, h3, h4, h5, h6 {
+      color: #0088cc;
+      font-weight: 400;
+    }
+    h3 {
+      margin: 15px 0;
+      font-size: 24px;
+    }
+
+    code {
+      background: rgba(23, 156, 222, 0.1);
+      padding: 2px 5px;
+      border-radius: 5px;
+      color: #0088cc;
+    }
+
+    .form h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
+    form {
+      .input {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        background: #fff;
+        border: 0;
+        border-radius: 10px;
+        overflow: hidden;
+        span.label {
+          font-size: 14px;
+          pointer-events: none;
+          display: block;
+          letter-spacing: 0;
+          transition: all .2s;
+          font-weight: 700;
+          padding-left: 15px;
+          line-height: 1;
+        }
+        input {
+          border: 0;
+          padding: 10px 15px;
+          margin: 0;
+          font-size: 14px;
+          line-height: 1;
+          text-align: right;
+          color: #7f7f7f;
+          height: 40px;
+        }
+
+        & + .input {
+          margin-top: 15px;
+        }
+
+        &.input_button {
+          & * {
+            width: 100%;
+            margin: 0;
+            text-align: center;
+            background: #fff;
+            font-size: 14px;
+            padding: 10px 15px;
+            color: #179cde;
+            cursor: pointer;
+            font-weight: 400;
+            transition: all .2s;
+            &:hover {
+              background: #fcfcfc;
+            }
+          }
+          
+          a {
+            display: block;
+            color: #de1717;
+            text-decoration: none;
+            line-height: 1;
+            padding: 13px 15px;
+          }
+        }
+      }
+
+      .input_group {
+        background: #fff;
+        border: 0;
+        border-radius: 10px;
+        overflow: hidden;
+        .input {
+          border-radius: 0;
+          & + .input {
+            margin-top: 0;
+            &::before {
+              content: '';
+              display: block;
+              position: absolute;
+              left: 15px;
+              right: 0;
+              top: 0;
+              height: 1px;
+              background: #000;
+              opacity: .2;
+              transform: translate(0, -50%);
+            }
+          }
+        }
+      }
+
+      .desc {
+        display: block;
+        padding: 0 15px;
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 400;
+        margin-top: 5px;
+      }
+
+      .input_group,
+      .input,
+      .desc {
+        & + .input_group,
+        & + .input {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,172 @@
+@keyframes t-logo-play {
+  from { background-position: 0% 0%; }
+  to   { background-position: 100% 0%; }
+}
+
+.header {
+  flex: 0 0 auto;
+  .menu {
+    position: relative;
+    background-color: #179cde;
+    padding: 5px;
+    height: 50px;
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    z-index: 1;
+    h1 {
+      margin: 0;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .logo {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      text-decoration: none;
+      .icon {
+        display: block;
+        width: 40px;
+        height: 40px;
+        animation: 500ms steps(30) both;
+        background-image: url(@img/t_logo_sprite.svg);
+        animation-name: t-logo-play;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      h1 {
+        margin-left: 5px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+
+    .login_buttons {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-left: auto;
+      span{
+        color: #fff;
+        margin-right: 10px;
+      }
+
+      .user_menu {
+        position: absolute;
+        top: 160px;
+        right: 0;
+        width: 150px;
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: all .25s;
+        a {
+          color: #179cde;
+          border-radius: 0;
+          font-size: 14px;
+          text-align: center;
+          padding: 10px;
+          &.exit {
+            color: #de1717;
+            font-weight: 700;
+          }
+          & + * {
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+          }
+        }
+
+        &.open{
+          top: 60px;
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+
+      a, button {
+        display: block;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-size: 14px;
+        line-height: 1;
+        border-radius: 20px;
+        color: #fff;
+        font-weight: 400;
+        cursor: pointer;
+        &.profile {
+          position: relative;
+          width: 34px;
+          height: 34px;
+          padding: 0;
+          margin-right: 5px;
+          background: #fff;
+          text-align: center;
+          border: 0;
+          display: block;
+          span {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 13px;
+            border-top: 1px solid #179cde;
+            border-bottom: 1px solid #179cde;
+            &:before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 0;
+              right: 0;
+              height: 1px;
+              background-color: #179cde;
+              transform: translate( 0, -50%);
+            }
+          }
+        }
+      }
+
+      
+    }
+  }
+  
+  &.index_header {
+    .logo {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      .icon {
+        display: block;
+        width: 80px;
+        height: 80px;
+        animation: 1000ms steps(30) both;
+        background-image: url(@img/t_logo_sprite.svg);
+        animation-name: t-logo-play;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 5px;
+      }
+      svg {
+        display: block;
+        width: 144px;
+        height: 35px;
+        margin: 3px auto 5px;
+      }
+      h1 {
+        display: block;
+        margin: 0;
+        font-size: 20px;
+        font-weight: 400;
+        color: #8c8c8c;
+        text-align: center;
+      }
+    }
+  }
+}

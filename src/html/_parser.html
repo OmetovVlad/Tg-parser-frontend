@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="text_block">
+                <img src="@img/25.svg" alt="" class="sticker">
+                <h3>Настройка граббера</h3>
+                <p>Добавляем в админы канала бота <code>@avtopostom_bot</code></p>
+                <p>Поля <b>Твой канал</b> и <b>Канал источник</b> указываем через <code>@</code></p>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 form">
+            <h3>Автоматический граббинг</h3>
+            <form action="" method="POST">
+
+                <div class="input_group">
+                    <div class="input">
+                        <span class="label">Твой канал</span>
+                        <input type="text" name="chat_id" placeholder="Ваш канал через @" value="@">
+                    </div>
+
+                    <div class="input">
+                        <span class="label">Канал источник</span>
+                        <input type="text" name="channel" placeholder="Источник через @" value="@">
+                    </div>
+                </div>
+
+                <div class="input">
+                    <span class="label">Количество постов</span>
+                    <input type="number" name="posts" placeholder="Количество постов (до 10)" min="1" max="10" value="1">
+                </div>
+                <span class="desc">Количество постов, которое будет публиковать бот за одну итерацию</span>
+
+                <div class="input_group">
+                    <div class="input">
+                        <span class="label">Дней</span>
+                        <input type="number" name="time_1" placeholder="Дней" min="0" max="7" value="1">
+                    </div>
+
+                    <div class="input">
+                        <span class="label">Часов</span>
+                        <input type="number" name="time_2" placeholder="Часов" min="0" max="23" value="0">
+                    </div>
+
+                    <div class="input">
+                        <span class="label">Минут</span>
+                        <input type="number" name="time_3" placeholder="Минут" min="0" max="59" value="0">
+                    </div>
+                </div>
+                <span class="desc">Установи периодичность, с которой бот будет публиковать новости в твоем канале</span>
+
+                <div class="input input_button">
+                    <input type="submit" value="Создать задание">
+                </div>
+
+            </form>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 form">
+            <h3>Разовый граббинг</h3>
+            <form action="" method="POST">
+                <div class="input_group">
+                    <div class="input">
+                        <span class="label">Твой канал</span>
+                        <input type="text" name="chat_id" placeholder="Ваш канал через @" value="@">
+                    </div>
+
+                    <div class="input">
+                        <span class="label">Канал источник</span>
+                        <input type="text" name="channel" placeholder="Источник через @" value="@">
+                    </div>
+                </div>
+
+                <div class="input">
+                    <span class="label">Количество постов</span>
+                    <input type="number" name="posts" placeholder="Количество постов (до 10)" min="1" max="10" value="1">
+                </div>
+                <span class="desc">Количество постов, которое будет опубликовано ботом</span>
+
+                <div class="input input_button">
+                    <input type="submit" value="Начать">
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
