@@ -1,7 +1,7 @@
 // Normalize.css
 @import "../../node_modules/normalize.css/normalize";
 // Bootstrap
-@import '../../node_modules/bootstrap/scss/bootstrap-grid';
+@import '../../node_modules/bootstrap/scss/bootstrap';
 
 // Шрифты
 // Удалить файл fonts.scss, если произошли какие-то изменения со шрифтами
@@ -58,6 +58,33 @@ body{
       color: #0088cc;
     }
 
+    .action_button {
+      display: flex;
+      font-weight: wrap;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #179cde;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      background: #fff;
+      border-radius: 10px;
+      margin: 0 auto;
+      &.green {
+        color: #4caf50;
+      }
+      &.red {
+        color: #de1717;
+      }
+      svg {
+        display: block;
+        width: 18px;
+        height: 18px;
+        margin: 0 auto;
+      }
+    }
+
     .form h3 {
       margin-top: 0;
       margin-bottom: 20px;
@@ -65,8 +92,12 @@ body{
     }
 
     .form {
-      padding-top: 25px;
-      padding-bottom: 25px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      @media (min-width: 768px) { 
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
     }
 
     form {
@@ -90,6 +121,7 @@ body{
           font-weight: 700;
           padding-left: 15px;
           line-height: 1;
+          width: 50%;
         }
         input {
           border: 0;
@@ -100,6 +132,7 @@ body{
           text-align: right;
           color: #7f7f7f;
           height: 40px;
+          width: 50%;
         }
 
         & + .input {
@@ -173,6 +206,29 @@ body{
         & + .input_group,
         & + .input {
           margin-top: 15px;
+        }
+      }
+    }
+
+    .table_wrapper {
+      border-radius: 10px;
+      border: 3px solid #179cde;
+      overflow: hidden;
+      .table {
+        margin-bottom: 0;
+        th {
+          white-space: nowrap;
+        }
+        .button_col {
+          width: 56px;
+        }
+        td {
+          .table_item {
+            height: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+          }
         }
       }
     }
