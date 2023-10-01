@@ -19,7 +19,7 @@ export function isWebp() {
 
 /* Меню второго порядка */
 export function subMenu(){
-	const subMenuToggle = document.querySelector('.header .login_buttons .profile');
+	const subMenuToggle = document.querySelector('.header .menu_list .profile');
 	const subMenuElement = document.querySelector('.header .user_menu');
 
 	if (subMenuToggle) {
