@@ -71,6 +71,7 @@ body{
       background: #fff;
       border-radius: 10px;
       margin: 0 auto;
+      border: 0;
       &.green {
         color: #4caf50;
       }
@@ -79,8 +80,8 @@ body{
       }
       svg {
         display: block;
-        width: 18px;
-        height: 18px;
+        width: 15px;
+        height: 15px;
         margin: 0 auto;
       }
     }
@@ -165,6 +166,7 @@ body{
           font-weight: 700;
           padding-left: 15px;
           width: 50%;
+          line-height: 20px;
         }
         input {
           width: 100%;
